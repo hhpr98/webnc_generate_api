@@ -1,14 +1,24 @@
 // See http://docs.sequelizejs.com/en/latest/docs/models-definition/
 // for more of what you can do here.
 const Sequelize = require('sequelize');
+const { DATE } = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const branch = sequelizeClient.define('branch', {
-    text: {
+  const tab1 = sequelizeClient.define('tab1', {
+    name: {
       type: DataTypes.STRING,
-      allowNull: false
+    },
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'createat',
+      default: DATE.now
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      field: 'updateat',
+      default: null
     }
   }, {
     hooks: {
@@ -19,10 +29,10 @@ module.exports = function (app) {
   });
 
   // eslint-disable-next-line no-unused-vars
-  branch.associate = function (models) {
+  tab1.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return branch;
+  return tab1;
 };

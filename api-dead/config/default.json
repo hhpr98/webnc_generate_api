@@ -28,5 +28,5 @@
       "passwordField": "password"
     }
   },
-  "postgres": "postgres://postgres:123456@127.0.0.1:5432/bysdb1"
+  "postgres": "postgres://postgres:123456@127.0.0.1:5432/testapi"
 }
