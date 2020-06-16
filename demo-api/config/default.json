@@ -9,7 +9,7 @@
   "authentication": {
     "entity": "user",
     "service": "users",
-    "secret": "y+tP66nl5KYBtmuuoZIierAX6ss=",
+    "secret": "jhqZWQKKLBf/ZtlsT1dvsM0reBM=",
     "authStrategies": [
       "jwt",
       "local"
@@ -28,5 +28,5 @@
       "passwordField": "password"
     }
   },
-  "postgres": "postgres://postgres:123456@127.0.0.1:5432/bysdb1"
+  "postgres": "postgres://postgres:123456@localhost:5432/bysdb1"
 }
